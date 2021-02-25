@@ -22,6 +22,10 @@ NSString * const WPAccountEmailAndDefaultBlogUpdatedNotification = @"WPAccountEm
 /// @name Default WordPress.com account
 ///------------------------------------
 
+- (instancetype) initWithCoreDataStack:(_Nonnull id<CoreDataStack>)coreDataStack {
+    [self initWithManagedObjectContext: [coreDataStack mainContext]];
+}
+
 /**
  Returns the default WordPress.com account
 

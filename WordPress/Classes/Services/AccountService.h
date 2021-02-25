@@ -5,6 +5,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class WPAccount;
 @class RemoteUser;
+@protocol CoreDataStack;
 
 extern NSString *const WPAccountDefaultWordPressComAccountChangedNotification;
 extern NSNotificationName const WPAccountEmailAndDefaultBlogUpdatedNotification;
@@ -14,6 +15,8 @@ extern NSNotificationName const WPAccountEmailAndDefaultBlogUpdatedNotification;
 ///------------------------------------
 /// @name Default WordPress.com account
 ///------------------------------------
+
+- (instancetype) initWithCoreDataStack:(id<CoreDataStack>)coreDataStack;
 
 /**
  Returns the default WordPress.com account
