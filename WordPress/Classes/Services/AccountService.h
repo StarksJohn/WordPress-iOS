@@ -19,17 +19,6 @@ extern NSNotificationName const WPAccountEmailAndDefaultBlogUpdatedNotification;
 - (instancetype) initWithCoreDataStack:(id<CoreDataStack>)coreDataStack;
 
 /**
- Returns the default WordPress.com account
- 
- The default WordPress.com account is the one used for Reader and Notifications
- 
- @return the default WordPress.com account
- @see setDefaultWordPressComAccount:
- @see removeDefaultWordPressComAccount
- */
-- (nullable WPAccount *)defaultWordPressComAccount;
-
-/**
  Sets the default WordPress.com account
  
  @param account the account to set as default for WordPress.com
@@ -100,8 +89,6 @@ extern NSNotificationName const WPAccountEmailAndDefaultBlogUpdatedNotification;
  */
 - (WPAccount *)createOrUpdateAccountWithUsername:(NSString *)username
                                        authToken:(NSString *)authToken;
-
-- (NSUInteger)numberOfAccounts;
 
 /**
  Returns all accounts currently existing in core data.
